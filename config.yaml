@@ -1,0 +1,146 @@
+# CONFIG FILE
+# Data from NASA  JPL's HORIZONS system J2000: 2017-02-21
+#----[simulation parameter]----
+
+# Swift path
+swift_path: /home/sandro/Programas/Swift/
+
+simulation_name: "vulcan"
+
+vulcans_semi_axis: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']
+a_variants: [0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.45,0.5]
+
+#mercurys_variants: 10 # Each Mercury has a different semi-axis.
+vulcans_clones: 10  # Each clone has differents angles
+
+#----[ Solar System parameter]----
+# Mass of the Sum [kg]
+mass_sun_kg: 1.988500e+30
+
+# Mass of the Sun, considering G = 1
+mass_sun_grav: 2.959139768995959e-04
+
+# Conic section is ellipse # Constant used in oe2pv function
+ialpha: -1
+
+# Gravitational factor of the Sun
+gm: 2.959139768995959e-04
+
+
+
+#----[Planets' data]----
+planets_names:
+  - mercury
+  - venus
+  - earth
+  - mars
+  - jupiter
+  - saturn
+  - uranus
+  - neptune 
+
+# Structure
+# planet: 
+#   a: semi-axis [au]
+#   e: eccentricity
+#   i: inclination [deg]
+#   radio: radio of the planet [km]
+#   period: orbital period [days]
+#   mass: mass of the planet [kg]
+#   M: mean anomoly [deg]
+
+vulcan:
+  #a: 0.38709893000000001
+  #e: 0.20499999999999999
+  #i: 7.0
+  radio: 6378.1369999999997
+  #period: 87.968999999999994
+  mass: 5.9722999999999996e+24 # equal earth's mass'
+
+
+mercury: 
+  a: 0.38709893000000001
+  #e: 0.20499999999999999
+  #i: 7.0
+  radio: 6378.1369999999997
+  #period: 87.968999999999994
+  mass: 5.9722999999999996e+24 # equal earth's mass'
+
+venus:
+  a: 0.72333199000000004
+  #e: 0.0067732299999999999
+  #i: 3.3947099999999999
+  radio: 6051.8000000000002
+  period: 224.70099999999999
+  mass: 4.8674999999999993e+24
+
+earth:
+  a: 1.00000011
+  #e: 0.016710220000000001
+  #i: 5.0000000000000002e-05
+  radio: 6378.1369999999997
+  period: 365.25599999999997
+  mass: 5.9722999999999996e+24
+
+mars:
+  a: 1.52366231
+  #e: 0.093412330000000002
+  #i: 1.8506100000000001
+  radio: 3396.1999999999998
+  period: 686.98000000000002
+  mass: 6.4171000000000003e+23
+
+jupiter:
+  a: 5.2033630100000003
+  #e: 0.048392659999999997
+  #i: 1.3052999999999999
+  radio: 71492.0
+  period: 4332.5889999999999
+  mass: 1.8981900000000001e+27
+
+saturn:
+  a: 9.5370703199999998
+  #e: 0.0541506
+  #i: 2.48445999999999
+  radio: 60268.0
+  period: 10759.219999999999
+  mass: 5.6834000000000003e+26
+
+uranus:
+  a: 19.191263930000002
+  #e: 0.047167710000000002
+  #i: 0.76985999999999999
+  radio: 25559.0
+  period: 30685.400000000001
+  mass: 8.6813e+25
+
+neptune:
+  a: 30.068963480000001
+  #e: 0.008585870000000000
+  #i: 1.7691699999999999
+  radio: 24764.0
+  perid: 60189.0
+  mass: 1.0241299999999999e+26
+  
+#----[Parameters of the simulation]----
+initial_time: 0.0e0
+time_stop: 3.65249999999e8
+timestep: 0.2
+dtout: 3.6525e5
+dtdump: 3.6525e5
+L1: F
+L2: T
+L3: F
+L4: T
+L5: T
+L6: F
+rmin: -1.0
+rmax: 1000.0
+rmaxu: -1.0
+qmin: -1.0
+lclose: F
+binary_outputfile: bin.out
+status_flag_for_open_statements: unknown
+
+#----[Arguments for swift routine]----
+subroutine_swift: swift_mvs.in
