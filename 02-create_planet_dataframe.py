@@ -10,24 +10,10 @@ import pandas as pd
 import numpy as np
 import rebound
 from oe2pv import orbel_el2xv
+from read_config_file import read_config_file
+
 # Transforms orbel_el2xv in vectorized function
 orbel_el2xv_vec = np.vectorize(orbel_el2xv)
-
-def read_config_file(config_file):
-    """
-    Read config file and go to home directory
-    """
-    home_dir = os.path.dirname(os.path.abspath(config_file))
-    os.chdir(home_dir)
-
-    # Read yaml file
-    with open(config_file, 'r') as stream:
-        try:
-            config = yaml.load(stream)
-        except yaml.YAMLError as exc:
-            print(exc)
-    
-    return config
 
 
 def main():
