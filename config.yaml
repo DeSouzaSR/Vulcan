@@ -139,7 +139,7 @@ rmax: 1000.0
 rmaxu: -1.0
 qmin: -1.0
 lclose: F
-binary_outputfile: bin.out
+binary_outputfile: bin.dat
 status_flag_for_open_statements: unknown
 
 #----[Arguments for swift routine]----
