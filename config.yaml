@@ -5,7 +5,7 @@
 # Swift path
 swift_path: /home/sandro/Programas/Swift/
 
-simulation_name: "vulcan"
+simulation_name: "vulcan_mvs"
 
 vulcans_semi_axis: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']
 a_variants: [0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.45,0.5]
