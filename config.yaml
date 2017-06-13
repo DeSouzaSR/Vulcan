@@ -26,7 +26,8 @@ ialpha: -1
 # Gravitational factor of the Sun
 gm: 2.959139768995959e-04
 
-
+# Gauss constant
+k = 0.017
 
 #----[Planets' data]----
 planets_names:

@@ -98,14 +98,27 @@ def main():
     for i in giants:
         sim.add(i) # Read data from NASA
     
-    for j in giants:
-        for p in sim.particles:
-           exec("{0}['x'] = {1}".format(j,p.x))
-           exec("{0}['y'] = {1}".format(j,p.y))
-           exec("{0}['z'] = {1}".format(j,p.z))
-           exec("{0}['vx'] = {1}".format(j,p.vx))
-           exec("{0}['vy'] = {1}".format(j,p.vy))
-           exec("{0}['vz'] = {1}".format(j,p.vz))
+    # for j in giants:
+    #     for p in sim.particles:
+    #        exec("{0}['x'] = {1}".format(j,p.x))
+    #        exec("{0}['y'] = {1}".format(j,p.y))
+    #        exec("{0}['z'] = {1}".format(j,p.z))
+    #        exec("{0}['vx'] = {1}".format(j,p.vx))
+    #        exec("{0}['vy'] = {1}".format(j,p.vy))
+    #        exec("{0}['vz'] = {1}".format(j,p.vz))
+    
+    for j, p in zip(giants, sim.particles):
+        exec("{0}['x'] = {1}".format(j,p.x))
+    for j, p in zip(giants, sim.particles):
+        exec("{0}['y'] = {1}".format(j,p.y))
+    for j, p in zip(giants, sim.particles):
+        exec("{0}['z'] = {1}".format(j,p.z))
+    for j, p in zip(giants, sim.particles):
+        exec("{0}['vx'] = {1}".format(j,p.vx))
+    for j, p in zip(giants, sim.particles):
+        exec("{0}['vy'] = {1}".format(j,p.vy))
+    for j, p in zip(giants, sim.particles):
+        exec("{0}['vz'] = {1}".format(j,p.vz))
 
     # Save planet dataframe
     for i in planets_names:
